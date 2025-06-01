@@ -9,8 +9,8 @@ interface CategoryRowProps {
 export default function CategoryRow({ title, items }: CategoryRowProps) {
     return (
         <div className="container mx-auto px-4 py-4">
-            <h2 className="text-xl font-bold mb-4">{title}</h2>
-            <div className="flex">
+            <h2 className="text-2xl font-bold mb-4">{title}</h2>
+            <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
                 {items.map((item) => (
                     <div key={item.id} className="flex-none w-40 md:w-48">
                         <MovieCard movie={item} />
