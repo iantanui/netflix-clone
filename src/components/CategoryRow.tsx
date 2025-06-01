@@ -8,7 +8,7 @@ interface CategoryRowProps {
 
 export default function CategoryRow({ title, items }: CategoryRowProps) {
     return (
-        <div className="container mx-auto px-4 py-4">
+        <div className="container mx-auto">
             <h2 className="text-2xl font-bold mb-4">{title}</h2>
             <div className="flex overflow-x-auto space-x-4 pb-4 scrollbar-hide">
                 {items.map((item) => (
