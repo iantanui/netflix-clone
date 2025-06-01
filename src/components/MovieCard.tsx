@@ -7,14 +7,16 @@ interface MovieCardProps {
 }
 
 export default function MovieCard({ movie } : MovieCardProps) {
+    const displayTitle = movie.title || movie.name || "Untitled";
+
     return (
         <Link href={`/movies/${movie.id}`} className="group">
             <div className="relative w-full aspect-[2/3] rounded overflow-hidden">
                 {movie.poster_path ? (
                     <Image
                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-                        alt={movie.title}
-                        className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
+                        alt={`${displayTitle} Poster`}
+                        className="object-cover transition-transform group-hover:scale-105"
                         fill
                     />
                 ) : (

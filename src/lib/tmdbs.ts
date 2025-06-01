@@ -8,7 +8,7 @@ export async function getTrendingMovies(): Promise<Movie[]> {
   const response = await axios.get(`${BASE_URL}/trending/movie/week`, {
     params: { api_key: API_KEY },
   });
-  return response.data.results.slice(0, 10); // Limit to 10 for performance
+  return response.data.results.slice(0, 10);
 }
 
 export async function getTrendingShows(): Promise<Movie[]> {
